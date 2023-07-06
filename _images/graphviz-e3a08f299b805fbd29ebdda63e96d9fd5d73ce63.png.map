@@ -1,0 +1,36 @@
+<map id="Entity Relationship Diagram" name="Entity Relationship Diagram">
+<area shape="rect" id="node1" title="dsgrid.query.models.DatasetModel
+
+Specifies the datasets to use in a project query.
+
+Attributes:
+ &#160;&#160;&#160;dataset_id (str): Identifier for the resulting dataset
+ &#160;&#160;&#160;source_datasets (list[Any]): Datasets from which to read. Each must be of type DatasetBaseModel.
+ &#160;&#160;&#160;expression (Optional[str]): Expression to combine datasets. Default is to take a union of all datasets. Default is None.
+ &#160;&#160;&#160;params (ProjectQueryDatasetParamsModel): Parameters affecting datasets. Used for caching intermediate tables. Default is dimension_filters=[] table_format=&lt;TableFormatType.PIVOTED: &#39;pivoted&#39;&gt;.
+" alt="" coords="617,24,1000,164"/>
+<area shape="rect" id="node2" title="dsgrid.query.models.ProjectQueryDatasetParamsModel
+
+Parameters in a project query that only apply to datasets
+
+Attributes:
+ &#160;&#160;&#160;dimension_filters (list[Any]): Filters to apply to all datasets. Default is [].
+ &#160;&#160;&#160;table_format (TableFormatType(Enum)): Controls table format. Default is TableFormatType.PIVOTED.
+" alt="" coords="1144,137,1476,221"/>
+<area shape="rect" id="node3" title="dsgrid.query.models.ProjectQueryParamsModel
+
+Defines how to transform a project into a CompositeDataset
+
+Attributes:
+ &#160;&#160;&#160;project_id (str): Project ID for query
+ &#160;&#160;&#160;dataset (DatasetModel): Definition of the dataset to create.
+ &#160;&#160;&#160;excluded_dataset_ids (list[str]): Datasets to exclude from query. Default is [].
+ &#160;&#160;&#160;include_dsgrid_dataset_components (bool):. Default is False.
+ &#160;&#160;&#160;version (Optional[str]): Version of project or dataset on which the query is based. Should not be set by the user
+ &#160;&#160;&#160;spark_conf_per_dataset (list[SparkConfByDataset]): Apply these Spark configuration settings while a dataset is being processed. Default is [].
+" alt="" coords="5,5,473,201"/>
+<area shape="rect" id="node4" title="dsgrid.query.models.SparkConfByDataset
+
+Defines a custom Spark configuration to use while running a query on a dataset.
+" alt="" coords="715,212,902,296"/>
+</map>

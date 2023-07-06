@@ -1,0 +1,10 @@
+<map id="Entity Relationship Diagram" name="Entity Relationship Diagram">
+<area shape="rect" id="node1" title="dsgrid.query.models.FilteredDatasetModel
+
+Filters to apply to a dataset
+
+Attributes:
+ &#160;&#160;&#160;dataset_id (str): Dataset ID
+ &#160;&#160;&#160;filters (list[Any]): Dimension filters to apply to the dataset&#39;
+" alt="" coords="95,5,272,89"/>
+</map>

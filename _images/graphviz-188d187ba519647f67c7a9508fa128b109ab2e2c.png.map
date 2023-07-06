@@ -1,0 +1,21 @@
+<map id="Entity Relationship Diagram" name="Entity Relationship Diagram">
+<area shape="rect" id="node1" title="dsgrid.config.dimensions.DimensionReferenceModel
+
+Reference to a dimension stored in the registry
+
+Attributes:
+ &#160;&#160;&#160;dimension_type (DimensionType(DSGEnum)): Type of the dimension
+ &#160;&#160;&#160;dimension_id (str): Unique ID of the dimension in the registry
+ &#160;&#160;&#160;version (str): Version of the dimension
+" alt="" coords="667,91,1009,203"/>
+<area shape="rect" id="node2" title="dsgrid.config.project_config.DimensionsModel
+
+Contains dimensions defined by a project
+
+Attributes:
+ &#160;&#160;&#160;base_dimensions (list): List of dimensions for a project&#39;s base dimensions. They will be automatically registered during project registration and then converted to base_dimension_references. Default is [].
+ &#160;&#160;&#160;base_dimension_references (list[DimensionReferenceModel]): List of registry references (``DimensionReferenceModel``) for a project&#39;s base dimensions. Default is [].
+ &#160;&#160;&#160;supplemental_dimensions (list): List of supplemental dimensions. They will be automatically registered during project registration and then converted to supplemental_dimension_references. Default is [].
+ &#160;&#160;&#160;supplemental_dimension_references (list[DimensionReferenceModel]): List of registry references for a project&#39;s supplemental dimensions. Default is [].
+" alt="" coords="5,5,523,145"/>
+</map>

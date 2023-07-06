@@ -1,0 +1,14 @@
+<map id="Entity Relationship Diagram" name="Entity Relationship Diagram">
+<area shape="rect" id="node1" title="dsgrid.query.models.ExponentialGrowthDatasetModel
+
+A dataset with growth rates that can be applied to a standalone dataset.
+
+Attributes:
+ &#160;&#160;&#160;dataset_id (str): Identifier for the resulting dataset
+ &#160;&#160;&#160;initial_value_dataset_id (str): Principal dataset identifier
+ &#160;&#160;&#160;growth_rate_dataset_id (str): Growth rate dataset identifier to apply to the principal dataset
+ &#160;&#160;&#160;construction_method (str): Specifier for the code that applies the growth rate to the principal dataset
+ &#160;&#160;&#160;base_year (Optional[int]): Base year of the dataset to use in growth rate application. Must be a year defined in the principal dataset&#39;s model year dimension. If None, there must be only one model year in that dimension and it will be used. Default is None.
+ &#160;&#160;&#160;dataset_type (DatasetType(Enum)): Type of dataset specified in a query. Default is DatasetType.EXPONENTIAL_GROWTH.
+" alt="" coords="15,5,352,201"/>
+</map>

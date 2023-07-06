@@ -1,0 +1,86 @@
+<map id="Entity Relationship Diagram" name="Entity Relationship Diagram">
+<area shape="rect" id="node1" title="dsgrid.query.models.AggregationModel
+
+Aggregate on one or more dimensions.
+
+Attributes:
+ &#160;&#160;&#160;aggregation_function (Optional[Any]): Must be a function name in pyspark.sql.functions
+ &#160;&#160;&#160;dimensions (DimensionQueryNamesModel): Dimensions on which to aggregate
+" alt="" coords="1029,425,1425,509"/>
+<area shape="rect" id="node2" title="dsgrid.query.models.DimensionQueryNamesModel
+
+Defines the list of dimensions to which the value columns should be aggregated.
+If a value is empty, that dimension will be aggregated and dropped from the table.
+" alt="" coords="1569,453,1908,705"/>
+<area shape="rect" id="node3" title="dsgrid.query.models.ColumnModel
+
+Defines one column in a SQL aggregation statement.
+
+Attributes:
+ &#160;&#160;&#160;function (Optional[Any]): Function or name of function in pyspark.sql.functions.
+ &#160;&#160;&#160;alias (Optional[str]): Name of the resulting column.
+" alt="" coords="2052,567,2351,679"/>
+<area shape="rect" id="node4" title="dsgrid.query.models.DatasetModel
+
+Specifies the datasets to use in a project query.
+
+Attributes:
+ &#160;&#160;&#160;dataset_id (str): Identifier for the resulting dataset
+ &#160;&#160;&#160;source_datasets (list[Any]): Datasets from which to read. Each must be of type DatasetBaseModel.
+ &#160;&#160;&#160;expression (Optional[str]): Expression to combine datasets. Default is to take a union of all datasets. Default is None.
+ &#160;&#160;&#160;params (ProjectQueryDatasetParamsModel): Parameters affecting datasets. Used for caching intermediate tables. Default is dimension_filters=[] table_format=&lt;TableFormatType.PIVOTED: &#39;pivoted&#39;&gt;.
+" alt="" coords="1036,5,1419,145"/>
+<area shape="rect" id="node5" title="dsgrid.query.models.ProjectQueryDatasetParamsModel
+
+Parameters in a project query that only apply to datasets
+
+Attributes:
+ &#160;&#160;&#160;dimension_filters (list[Any]): Filters to apply to all datasets. Default is [].
+ &#160;&#160;&#160;table_format (TableFormatType(Enum)): Controls table format. Default is TableFormatType.PIVOTED.
+" alt="" coords="1573,119,1905,203"/>
+<area shape="rect" id="node6" title="dsgrid.query.models.ProjectQueryModel
+
+Represents a user query on a Project.
+
+Attributes:
+ &#160;&#160;&#160;name (str): Name of query
+ &#160;&#160;&#160;version (str): Version of the query structure. Changes to the major or minor version invalidate cached tables. Default is &#39;0.1.0&#39;.
+ &#160;&#160;&#160;project (ProjectQueryParamsModel): Defines the datasets to use and how to transform them.
+ &#160;&#160;&#160;result (QueryResultParamsModel): Controls the output results. Default is supplemental_columns=[] replace_ids_with_names=False aggregations=[] reports=[] column_type=&lt;ColumnType.DIMENSION_QUERY_NAMES: &#39;dimension_query_names&#39;&gt; output_format=&#39;parquet&#39; sort_columns=[] dimension_filters=[] time_zone=None.
+" alt="" coords="5,68,273,208"/>
+<area shape="rect" id="node7" title="dsgrid.query.models.ProjectQueryParamsModel
+
+Defines how to transform a project into a CompositeDataset
+
+Attributes:
+ &#160;&#160;&#160;project_id (str): Project ID for query
+ &#160;&#160;&#160;dataset (DatasetModel): Definition of the dataset to create.
+ &#160;&#160;&#160;excluded_dataset_ids (list[str]): Datasets to exclude from query. Default is [].
+ &#160;&#160;&#160;include_dsgrid_dataset_components (bool):. Default is False.
+ &#160;&#160;&#160;version (Optional[str]): Version of project or dataset on which the query is based. Should not be set by the user
+ &#160;&#160;&#160;spark_conf_per_dataset (list[SparkConfByDataset]): Apply these Spark configuration settings while a dataset is being processed. Default is [].
+" alt="" coords="417,24,885,220"/>
+<area shape="rect" id="node8" title="dsgrid.query.models.QueryResultParamsModel
+
+Controls post&#45;processing and storage of CompositeDatasets
+
+Attributes:
+ &#160;&#160;&#160;supplemental_columns (list[Union[str, ColumnModel]]): Add these supplemental dimension query names as columns in result tables. Applies to all dimensions_to_aggregate. Default is [].
+ &#160;&#160;&#160;replace_ids_with_names (bool): Replace dimension record IDs with their names in result tables. Default is False.
+ &#160;&#160;&#160;aggregations (list[AggregationModel]): Defines how to aggregate dimensions. Default is [].
+ &#160;&#160;&#160;reports (list[ReportInputModel]): Run these pre&#45;defined reports on the result. Default is [].
+ &#160;&#160;&#160;column_type (ColumnType(DSGEnum)): Whether to make the result table columns dimension types. Default behavior is to use dimension query names. In order to register a result table as a derived dataset, this must be set to dimension_types. Default is ColumnType.DIMENSION_QUERY_NAMES.
+ &#160;&#160;&#160;output_format (str): Output file format: csv or parquet. Default is &#39;parquet&#39;.
+ &#160;&#160;&#160;sort_columns (list[str]): Sort the results by these dimension query names. Default is [].
+ &#160;&#160;&#160;dimension_filters (list[Any]): Filters to apply to the result. Must contain columns in the result. Default is [].
+ &#160;&#160;&#160;time_zone (Optional[str]): Convert the results to this time zone. Default is None.
+" alt="" coords="441,326,862,606"/>
+<area shape="rect" id="node9" title="dsgrid.query.models.SparkConfByDataset
+
+Defines a custom Spark configuration to use while running a query on a dataset.
+" alt="" coords="1134,193,1321,277"/>
+<area shape="rect" id="node10" title="dsgrid.query.models.ReportInputModel
+
+Base data model for all dsgrid data models
+" alt="" coords="1106,557,1349,641"/>
+</map>

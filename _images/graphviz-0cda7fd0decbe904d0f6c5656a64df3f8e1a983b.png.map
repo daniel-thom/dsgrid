@@ -1,0 +1,20 @@
+<map id="Entity Relationship Diagram" name="Entity Relationship Diagram">
+<area shape="rect" id="node1" title="dsgrid.query.models.DatasetModel
+
+Specifies the datasets to use in a project query.
+
+Attributes:
+ &#160;&#160;&#160;dataset_id (str): Identifier for the resulting dataset
+ &#160;&#160;&#160;source_datasets (list[Any]): Datasets from which to read. Each must be of type DatasetBaseModel.
+ &#160;&#160;&#160;expression (Optional[str]): Expression to combine datasets. Default is to take a union of all datasets. Default is None.
+ &#160;&#160;&#160;params (ProjectQueryDatasetParamsModel): Parameters affecting datasets. Used for caching intermediate tables. Default is dimension_filters=[] table_format=&lt;TableFormatType.PIVOTED: &#39;pivoted&#39;&gt;.
+" alt="" coords="5,5,388,145"/>
+<area shape="rect" id="node2" title="dsgrid.query.models.ProjectQueryDatasetParamsModel
+
+Parameters in a project query that only apply to datasets
+
+Attributes:
+ &#160;&#160;&#160;dimension_filters (list[Any]): Filters to apply to all datasets. Default is [].
+ &#160;&#160;&#160;table_format (TableFormatType(Enum)): Controls table format. Default is TableFormatType.PIVOTED.
+" alt="" coords="532,119,864,203"/>
+</map>

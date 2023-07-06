@@ -1,0 +1,42 @@
+<map id="Entity Relationship Diagram" name="Entity Relationship Diagram">
+<area shape="rect" id="node1" title="dsgrid.query.models.AggregationModel
+
+Aggregate on one or more dimensions.
+
+Attributes:
+ &#160;&#160;&#160;aggregation_function (Optional[Any]): Must be a function name in pyspark.sql.functions
+ &#160;&#160;&#160;dimensions (DimensionQueryNamesModel): Dimensions on which to aggregate
+" alt="" coords="571,101,967,185"/>
+<area shape="rect" id="node2" title="dsgrid.query.models.DimensionQueryNamesModel
+
+Defines the list of dimensions to which the value columns should be aggregated.
+If a value is empty, that dimension will be aggregated and dropped from the table.
+" alt="" coords="1111,129,1449,381"/>
+<area shape="rect" id="node3" title="dsgrid.query.models.ColumnModel
+
+Defines one column in a SQL aggregation statement.
+
+Attributes:
+ &#160;&#160;&#160;function (Optional[Any]): Function or name of function in pyspark.sql.functions.
+ &#160;&#160;&#160;alias (Optional[str]): Name of the resulting column.
+" alt="" coords="1593,243,1892,355"/>
+<area shape="rect" id="node4" title="dsgrid.query.models.QueryResultParamsModel
+
+Controls post&#45;processing and storage of CompositeDatasets
+
+Attributes:
+ &#160;&#160;&#160;supplemental_columns (list[Union[str, ColumnModel]]): Add these supplemental dimension query names as columns in result tables. Applies to all dimensions_to_aggregate. Default is [].
+ &#160;&#160;&#160;replace_ids_with_names (bool): Replace dimension record IDs with their names in result tables. Default is False.
+ &#160;&#160;&#160;aggregations (list[AggregationModel]): Defines how to aggregate dimensions. Default is [].
+ &#160;&#160;&#160;reports (list[ReportInputModel]): Run these pre&#45;defined reports on the result. Default is [].
+ &#160;&#160;&#160;column_type (ColumnType(DSGEnum)): Whether to make the result table columns dimension types. Default behavior is to use dimension query names. In order to register a result table as a derived dataset, this must be set to dimension_types. Default is ColumnType.DIMENSION_QUERY_NAMES.
+ &#160;&#160;&#160;output_format (str): Output file format: csv or parquet. Default is &#39;parquet&#39;.
+ &#160;&#160;&#160;sort_columns (list[str]): Sort the results by these dimension query names. Default is [].
+ &#160;&#160;&#160;dimension_filters (list[Any]): Filters to apply to the result. Must contain columns in the result. Default is [].
+ &#160;&#160;&#160;time_zone (Optional[str]): Convert the results to this time zone. Default is None.
+" alt="" coords="5,18,427,298"/>
+<area shape="rect" id="node5" title="dsgrid.query.models.ReportInputModel
+
+Base data model for all dsgrid data models
+" alt="" coords="647,233,890,317"/>
+</map>

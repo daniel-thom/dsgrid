@@ -1,0 +1,10 @@
+<map id="Entity Relationship Diagram" name="Entity Relationship Diagram">
+<area shape="rect" id="node1" title="dsgrid.query.models.StandaloneDatasetModel
+
+A dataset with energy use data.
+
+Attributes:
+ &#160;&#160;&#160;dataset_id (str): Dataset identifier
+ &#160;&#160;&#160;dataset_type (DatasetType(Enum)): Type of dataset specified in a query. Default is DatasetType.STANDALONE.
+" alt="" coords="56,5,311,89"/>
+</map>

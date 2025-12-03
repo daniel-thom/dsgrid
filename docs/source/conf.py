@@ -33,6 +33,7 @@ release = dsgrid.__version__
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "myst_parser",
     "sphinx.ext.autodoc",
     "sphinx.ext.doctest",
     "sphinx.ext.coverage",
@@ -48,7 +49,18 @@ extensions = [
     "sphinx_click",
     "sphinxcontrib.autodoc_pydantic",
     "sphinx_tabs.tabs",
+    "sphinx_design",
 ]
+
+# MyST parser configuration
+myst_enable_extensions = [
+    "colon_fence",
+    "deflist",
+    "fieldlist",
+    "substitution",
+    "tasklist",
+]
+myst_heading_anchors = 3
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -111,5 +123,3 @@ copybutton_copy_empty_lines = False
 autodoc_pydantic_model_show_json = False
 autodoc_pydantic_model_show_config_member = False
 autodoc_pydantic_model_show_config_summary = False
-autodoc_pydantic_model_erdantic_figure = True
-autodoc_pydantic_model_erdantic_figure_collapsed = False

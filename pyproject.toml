@@ -119,6 +119,7 @@ doc = [
     "sphinx",
     "sphinx-click",
     "sphinx-copybutton",
+    "sphinx-design",
     "sphinx-tabs",
     "sphinx_argparse",
     "sphinxcontrib.programoutput",

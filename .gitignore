@@ -1,3 +1,20 @@
+# Editor generated files #
+##########################
+.vscode
+.mypy_cache
+.idea
+cscope.files
+tags
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -26,6 +43,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+_build/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -50,6 +68,7 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+local-registry/
 
 # Translations
 *.mo
@@ -70,6 +89,7 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+docs/source/api/
 
 # PyBuilder
 target/
@@ -127,3 +147,21 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+poetry.lock
+
+tests/data/registry/*
+emr/running_cluster_id.txt
+emr/emr_config.yml
+spark-warehouse
+metastore_db
+__dsgrid_scratch__
+*.tgz
+*.db
+
+# Rust / Cargo
+rust/target/
+rust/Cargo.lock
+**/*.rs.bk
+*.pyd
+*.pyo

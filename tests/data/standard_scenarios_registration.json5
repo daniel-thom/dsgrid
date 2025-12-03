@@ -1,0 +1,92 @@
+{
+  "projects": [
+    {
+      "project_id": "dsgrid_conus_2022",
+      "config_file": "dsgrid-project-StandardScenarios/dsgrid_project/project.json5",
+      "register_project": true,
+      "datasets": [
+          "dataset_id": "eia_861_annual_energy_use_state_sector",
+          "dataset_path": "eia_861_annual_energy_use_state_sector",
+          "config_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/historical/eia_861_annual_energy_use_state_sector/dataset.json5",
+          "dimension_mapping_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/historical/eia_861_annual_energy_use_state_sector/dimension_mappings.json5",
+          "register_dataset": true,
+          "submit_to_project": true,
+          "replace_dimension_names_with_ids": false,
+          "replace_dimension_mapping_names_with_ids": false
+        },
+        {
+          "dataset_id": "dsgrid_efs_2012_distributed_generation",
+          "dataset_path": "dsgrid_efs_2012_distributed_generation",
+          "config_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/historical/dsgrid_efs_2012_distributed_generation/dataset.json5",
+          "dimension_mapping_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/historical/dsgrid_efs_2012_distributed_generation/dimension_mappings.json5",
+          "register_dataset": true,
+          "submit_to_project": true,
+          "replace_dimension_names_with_ids": false,
+          "replace_dimension_mapping_names_with_ids": false
+        },
+        {
+          "dataset_id": "dsgrid_efs_2012_losses",
+          "dataset_path": "dsgrid_efs_2012_losses",
+          "config_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/historical/dsgrid_efs_2012_losses/dataset.json5",
+          "dimension_mapping_file": "../dsgrid-project-StandardScenarios/dsgrid_project/datasets/historical/dsgrid_efs_2012_losses/dimension_mappings.json5",
+          "register_dataset": true,
+          "submit_to_project": true,
+          "replace_dimension_names_with_ids": false,
+          "replace_dimension_mapping_names_with_ids": false
+        },
+        {
+          "dataset_id": "comstock_conus_2022_reference",
+          "dataset_path": "comstock_conus_2022_reference",
+          "config_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/modeled/comstock/dataset.json5",
+          "dimension_mapping_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/modeled/comstock/dimension_mappings.json5",
+          "register_dataset": true,
+          "submit_to_project": true,
+          "replace_dimension_names_with_ids": false,
+          "replace_dimension_mapping_names_with_ids": false
+        },
+        {
+          "dataset_id": "resstock_conus_2022_reference",
+          "dataset_path": "resstock_conus_2022_reference",
+          "config_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/modeled/resstock/dataset.json5",
+          "dimension_mapping_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/modeled/resstock/dimension_mappings.json5",
+          "register_dataset": true,
+          "submit_to_project": true,
+          "replace_dimension_names_with_ids": false,
+          "replace_dimension_mapping_names_with_ids": false
+        },
+        {
+          "dataset_id": "tempo_conus_2022",
+          "dataset_path": "tempo_conus_2022",
+          "config_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/modeled/tempo/dataset.json5",
+          "dimension_mapping_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/modeled/tempo/dimension_mappings.json5",
+          "register_dataset": false,
+          "submit_to_project": false,
+          "replace_dimension_names_with_ids": false,
+          "replace_dimension_mapping_names_with_ids": false
+        },
+        {
+          "dataset_id": "aeo2021_reference_residential_energy_use_growth_factors",
+          "dataset_path": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/modeled/aeo2021_reference/residential/End_Use_Growth_Factors/data",
+          "config_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/modeled/aeo2021_reference/residential/End_Use_Growth_Factors/dataset.json5",
+          "dimension_mapping_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/modeled/aeo2021_reference/residential/End_Use_Growth_Factors/dimension_mappings.json5",
+          "register_dataset": true,
+          "submit_to_project": true,
+          "replace_dimension_names_with_ids": true,
+          "replace_dimension_mapping_names_with_ids": false,
+          "autogen_reverse_supplemental_mappings": ["geography"]
+        },
+        {
+          "dataset_id": "aeo2021_reference_commercial_energy_use_growth_factors",
+          "dataset_path": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/modeled/aeo2021_reference/commercial/End_Use_Growth_Factors/data",
+          "config_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/modeled/aeo2021_reference/commercial/End_Use_Growth_Factors/dataset.json5",
+          "dimension_mapping_file": "dsgrid-project-StandardScenarios/dsgrid_project/datasets/modeled/aeo2021_reference/commercial/End_Use_Growth_Factors/dimension_mappings.json5",
+          "register_dataset": true,
+          "submit_to_project": true,
+          "replace_dimension_names_with_ids": false,
+          "replace_dimension_mapping_names_with_ids": false,
+          "autogen_reverse_supplemental_mappings": ["geography"]
+        }
+      ]
+    }
+  ]
+}
